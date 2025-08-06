@@ -21,7 +21,7 @@ public class ToDoController {
 		this.todoService = todoService;
 	}
 	//ビュー(todoView)の画面を表示
-	@GetMapping("/")
+	@GetMapping("/todo")
 	public String todoView(Model model) {
 		// データベースを取得
 		List<ToDo> todos = todoService.getAllTodos();
