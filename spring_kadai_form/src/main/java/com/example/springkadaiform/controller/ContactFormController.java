@@ -18,7 +18,7 @@ public class ContactFormController {
 
 	
 
-	@GetMapping("/contactForm")
+	@GetMapping("/form")
 
 	public String usermessage(Model model) {
 		
@@ -36,7 +36,7 @@ public class ContactFormController {
 	  
 	
 	   
-	@PostMapping("/contactForm")
+	@PostMapping("/form")
 	public String confirm(Model model,RedirectAttributes redirectAttributes,
 			@Validated ContactForm form, BindingResult result) {
 			
@@ -49,7 +49,7 @@ public class ContactFormController {
              (BindingResult.MODEL_KEY_PREFIX + Conventions.getVariableName(form), result);
 
              // フォーム画面にリダイレクト
-             return "redirect:/contactForm";
+             return "redirect:/form";
              
              
          }
