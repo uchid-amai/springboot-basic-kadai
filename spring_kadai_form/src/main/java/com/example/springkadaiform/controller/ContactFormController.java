@@ -64,12 +64,5 @@ public class ContactFormController {
         return "redirect:/confirm";
 }
 	
-	@GetMapping("/confirm")
-	public String showConfirm(Model model) {
-	    // contactForm がない場合はフォーム画面へ戻す
-	    if (!model.containsAttribute("contactForm")) {
-	        return "redirect:/form";
-	    }
-	    return "confirmView";
-	}
+	
 	}
