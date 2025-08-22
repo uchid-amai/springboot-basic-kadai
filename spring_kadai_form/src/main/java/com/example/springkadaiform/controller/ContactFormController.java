@@ -36,7 +36,7 @@ public class ContactFormController {
 	  
 	
 	   
-	@PostMapping("/form")
+	@PostMapping("/confirm")
 	public String confirm(Model model,RedirectAttributes redirectAttributes,
 			@Validated ContactForm form, BindingResult result) {
 			
@@ -55,13 +55,11 @@ public class ContactFormController {
          }
         
         
-        // ビューにフォームクラスのインスタンスを渡す
-        model.addAttribute("contactForm", form);
 
 
         // 確認画面を表示
-        redirectAttributes.addFlashAttribute("contactForm", form);
-        return "redirect:/confirm";
+      
+        return "confirmView";
 }
 	
 	
